@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- This is where we load A-Frame and AR.js to load our models in -->
+		<script src="https://aframe.io/releases/o.9.2/aframe.min.js!></script?
+		<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.4/aframe/build/aframe-ar.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/domccurdy/aframe-eras@v6.0.1/dist/aframe-extras@v6.0.1/dist/aframe-extras.min.js">
+		</script>
+	</head>
+	<body style='margin : 0px; overflow: hidden;'>
+		<a-scene embedded arjs>
+			<a-assets>
+				<a-asset-item id="bird" response-type="arraybuffer" src="models/scene.glb"></a-asset-item> <!-- Once you've found a model this is where we l-->
+			</a-assets>
+			<a-marker id="" type="pattern" url="markers/shells-marker.patt">
+				<!-- Here define the content to display on top of the marker -->
+				<a-entity id="bird-gltf" gltf-model="#bird" position="0 0.5 0" scale="0.1 0.1 0.1"></a-entity>
+			</a-marker>
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
+		
